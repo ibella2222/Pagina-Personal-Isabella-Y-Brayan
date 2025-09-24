@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brayan Meneses - Desarrollador</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">BM</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#estudios" class="nav-link">Estudios</a></li>
+                <li><a href="#pasatiempos" class="nav-link">Pasatiempos</a></li>
+                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Inicio Section -->
+    <section id="inicio" class="section hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="highlight">Hola, soy<br><span class="highlight">Brayan Meneses</span></h1>
+                    <h2>Desarrollador Full Stack & Diseñador Creativo</h2>
+                    <p class="birth-date">Fecha de nacimiento: 03 de noviembre, 2001</p>
+                    <div class="expectations">
+                        <h3>Mis expectativas como profesional</h3>
+                        <p>Como desarrollador full stack, aspiro a crear experiencias digitales que marquen la
+                            diferencia. Mi objetivo es combinar tecnología moderna con diseño innovador para dar vida a
+                            ideas extraordinarias. Busco contribuir en proyectos que impacten positivamente en la
+                            sociedad, mientras continúo creciendo profesionalmente en un ambiente colaborativo y
+                            desafiante que me permita expandir mis habilidades técnicas y creativas.</p>
+                    </div>
+                    <button class="cta-button" onclick="document.getElementById('proyectos').scrollIntoView()">
+                         Ver Mi Trabajo
+                    </button>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/brayanMeneses1.jpg" alt="Brayan Meneses" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estudios Section -->
+    <section id="estudios" class="section">
+        <div class="container">
+            <h2 class="section-title">Estudios</h2>
+            <div class="studies-container">
+                <table class="studies-table">
+                    <thead>
+                        <tr>
+                            <th>Nivel</th>
+                            <th>Institución</th>
+                            <th>Años</th>
+                            <th>Ubicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Universidad</td>
+                            <td>Universidad del Cauca</td>
+                            <td>2022–2027</td>
+                            <td>Popayán, Colombia</td>
+                        </tr>
+                        <tr>
+                            <td>Bachillerato</td>
+                            <td>Colegio Jose Dolores</td>
+                            <td>2013–2018</td>
+                            <td>Bolivar(cauca), Colombia</td>
+                        </tr>
+                        <tr>
+                            <td>Primaria</td>
+                            <td>Escuela Rural</td>
+                            <td>2007–2012</td>
+                            <td>Bolivar(cauca), Colombia</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasatiempos Section -->
+    <section id="pasatiempos" class="section">
+        <div class="container">
+            <h2 class="section-title">Pasatiempos</h2>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slide active">
+                        <img src="assets/images/programacion.jpg" alt="Programación">
+                        <div class="slide-content">
+                            <h3>Programación Creativa</h3>
+                            <p>Me apasiona explorar nuevas tecnologías. Crear aplicaciones web, experimentos con
+                                IA,donde cada línea de código es una oportunidad de aprender algo nuevo.</p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/ajedrez.jpg" alt="Fotografía">
+                        <div class="slide-content">
+                            <h3>Ajedrez </h3>
+                            <p>
+                                Uno de mis pasatiempos es jugar ajedrez. Me gusta porque combina estrategia,
+                                concentración
+                                y creatividad. Cada partida es un reto distinto, donde puedo analizar, planear y
+                                anticipar
+                                movimientos, lo cual me ayuda a mantener la mente activa y mejorar mi capacidad de
+                                resolución de problemas.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="assets/images/lectura.jpg" alt="Lectura">
+                        <div class="slide-content">
+                            <h3>Lectura </h3>
+                            <p>
+                                También suelo leer libros en mi tiempo libre. Disfruto explorar diferentes géneros,
+                                desde novelas de ficción hasta textos de desarrollo personal y tecnología. La lectura
+                                me permite aprender cosas nuevas, relajarme y al mismo tiempo ampliar mi perspectiva
+                                sobre el mundo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev" onclick="changeSlide(-1)">‹</button>
+                        <button class="carousel-btn next" onclick="changeSlide(1)">›</button>
+                    </div>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Proyectos Section -->
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sistema de Gestión Académica</h3>
+                    <p>Plataforma completa para administrar estudiantes de pregrado y asociarlo a ofertas laborales.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Spring boot</span>
+                        <span class="tech">Docker</span>
+                        <span class="tech">Java</span>
+                        <span class="tech">RabbitMQ</span>
+                        <span class="tech">PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>plataforma de reservas </h3>
+                    <p>Aplicación para reservas canchas sinteticas.</p>
+                    <div class="tech-stack">
+                        <span class="tech">C#</span>
+                        <span class="tech">.Net</span>
+                        <span class="tech">Oracle</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>E-commerce de Productos Locales</h3>
+                    <p>Tienda en línea que conecta productores locales con consumidores de la región.</p>
+                    <div class="tech-stack">
+                        <span class="tech">Vue.js</span>
+                        <span class="tech">Express</span>
+                        <span class="tech">PostgreSQL</span>
+                        <span class="tech">Stripe API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                                <span class="error-message" id="nombre-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="email-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono">
+                                <span class="error-message" id="telefono-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="motivo">Motivo de contacto</label>
+                                <select id="motivo" name="motivo" required>
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="trabajo">Oportunidad laboral</option>
+                                    <option value="proyecto">Colaboración en proyecto</option>
+                                    <option value="consultoria">Consultoría</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required
+                                placeholder="Escribe tu mensaje aquí..."></textarea>
+                            <span class="error-message" id="mensaje-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferencia de contacto</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="preferencia" value="email" checked>
+                                    <span class="radio-custom"></span>
+                                    Email
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="preferencia" value="telefono">
+                                    <span class="radio-custom"></span>
+                                    Teléfono
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="preferencia" value="whatsapp">
+                                    <span class="radio-custom"></span>
+                                    WhatsApp
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="terminos" name="terminos" required>
+                                <span class="checkmark"></span>
+                                Acepto los términos y condiciones *
+                            </label>
+                            <span class="error-message" id="terminos-error"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                        <div id="form-message" class="form-message"></div>
+                    </form>
+                </div>
+                <div class="contacts-list-container">
+                    <div class="contacts-header">
+                        <h3>Mensajes Recibidos</h3>
+                        <button onclick="contactFacade.borrarTodo()" class="clear-all-btn">Borrar Todo</button>
+                    </div>
+                    <div id="contacts-list" class="contacts-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Brayan Meneses. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <script src="js/contacto/domain/Contacto.js"></script>
+    <script src="js/contacto/repository/ContactRepository.js"></script>
+    <script src="js/contacto/facade/ContactFacade.js"></script>    
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
