@@ -14,14 +14,14 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    line-height: 2.7;
     color: var(--dark-color);
     overflow-x: hidden;
 }
 
 /* Navbar moderna */
 .modern-navbar {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(230, 225, 232, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -102,9 +102,10 @@ body {
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
+/* === BOTONES CON DEGRADADO === */
 .cta-button {
-    background: white;
-    color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
     border: none;
     padding: 15px 40px;
     border-radius: 50px;
@@ -113,12 +114,12 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1s ease-out 0.6s both;
+    cursor: pointer;
 }
 
 .cta-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    color: var(--primary-color);
 }
 
 .profile-image {
@@ -196,6 +197,278 @@ body {
     color: var(--dark-color);
 }
 
+/* === SECCIÓN ESTUDIOS: FONDO SÓLIDO SUAVE === */
+#estudios {
+    background-color: #f8f6ff; /* Lila suave, no blanco */
+}
+
+#estudios .section-title {
+    color: var(--dark-color);
+    margin-bottom: 2.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+#estudios .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* Contenedor de la tabla */
+#estudios .table-responsive {
+    margin-top: 1.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    background: white;
+}
+
+/* Tabla */
+#estudios .table {
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Encabezado */
+#estudios .table thead th {
+    background: linear-gradient(135deg, var(--primary-color), #5a2de0) !important;
+    color: white !important;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 1.1rem 1.3rem;
+    text-align: left;
+    border: none;
+    letter-spacing: 0.5px;
+}
+
+/* Cuerpo */
+#estudios .table tbody td {
+    padding: 1.1rem 1.3rem;
+    border: none;
+    color: var(--dark-color);
+    font-size: 1rem;
+    vertical-align: middle;
+    transition: all 0.25s ease;
+}
+
+#estudios .table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+#estudios .table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Filas impares: fondo muy suave */
+#estudios .table tbody tr:nth-of-type(odd) {
+    background-color: rgba(123, 66, 255, 0.02);
+}
+
+/* Hover en filas */
+#estudios .table tbody tr:hover {
+    background-color: rgba(123, 66, 255, 0.06) !important;
+    transform: translateY(-1px);
+    box-shadow: inset 4px 0 0 var(--primary-color);
+}
+
+/* Texto secundario (detalles del programa) */
+#estudios .table small {
+    color: var(--dark-color);
+    opacity: 0.7;
+    font-weight: 400;
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 0.92rem;
+    line-height: 1.4;
+}
+
+/* === SECCIÓN PASATIEMPOS: FONDO COMO HERO === */
+#pasatiempos {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+#pasatiempos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+    z-index: 1;
+}
+
+#pasatiempos .section {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+#pasatiempos .section-title {
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+#pasatiempos .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, white, rgba(255, 255, 255, 0.7));
+    border-radius: 2px;
+}
+
+/* Contenedor del carrusel */
+#pasatiempos .carousel-inner {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    color: white;
+}
+
+/* Imagenes */
+#pasatiempos .carousel-item img {
+    border: 4px solid white;
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+#pasatiempos .carousel-item img:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-color);
+}
+
+/* Título y descripción */
+#pasatiempos .hobby-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#pasatiempos .hobby-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Controles del carrusel */
+#pasatiempos .carousel-control-prev-icon,
+#pasatiempos .carousel-control-next-icon {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+#pasatiempos .carousel-indicators [data-bs-target] {
+    background-color: white;
+    opacity: 0.5;
+}
+
+#pasatiempos .carousel-indicators .active {
+    opacity: 1;
+    width: 30px;
+    border-radius: 15px;
+}
+
+/* === SECCIÓN PROYECTOS: FONDO SÓLIDO SUAVE === */
+#proyectos {
+    background-color: #f8f6ff; /* Mismo fondo suave que Estudios */
+}
+
+#proyectos .section-title {
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+}
+
+#proyectos .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 2px;
+}
+
+/* Tarjetas de proyectos */
+.project-card {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+/* Título */
+.project-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin-bottom: 0.8rem;
+}
+
+/* Descripción */
+.project-description {
+    font-size: 1rem;
+    color: var(--dark-color);
+    opacity: 0.85;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Badges de tecnologías */
+.tech-badges .tech-badge {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+    background: var(--primary-color);
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.tech-badges .tech-badge:hover {
+    background: var(--accent-color);
+    color: var(--dark-color);
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -251,5 +524,54 @@ body {
 
     .floating-element {
         display: none;
+    }
+
+    /* Estudios */
+    #estudios .table thead th,
+    #estudios .table tbody td {
+        padding: 1rem 0.8rem;
+        font-size: 0.95rem;
+    }
+
+    #estudios .table small {
+        font-size: 0.85rem;
+    }
+
+    /* Pasatiempos */
+    #pasatiempos .carousel-item {
+        flex-direction: column;
+    }
+
+    #pasatiempos .carousel-item img {
+        max-width: 300px;
+        height: 250px;
+        border-radius: 20px;
+        border-color: white;
+    }
+
+    #pasatiempos .hobby-title {
+        font-size: 1.6rem;
+    }
+
+    /* Proyectos */
+    #proyectos .section-title {
+        font-size: 2rem;
+    }
+
+    .project-card {
+        height: auto;
+    }
+
+    .project-title {
+        font-size: 1.3rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+    }
+
+    .tech-badges .tech-badge {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
     }
 }
