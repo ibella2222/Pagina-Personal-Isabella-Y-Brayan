@@ -14,52 +14,78 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 2.7;
+    line-height: 1.6; /* ajustado para mejor legibilidad */
     color: var(--dark-color);
     overflow-x: hidden;
 }
 
-/* Navbar moderna */
+/* === NAVBAR MODERNA (OSCURA Y ELEGANTE) === */
 .modern-navbar {
-    background: rgba(230, 225, 232, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(15, 15, 27, 0.92); /* Negro azulado casi opaco */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Compatibilidad con Safari */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(123, 66, 255, 0.2); /* Toque de color sutil */
 }
 
+/* Logo del navbar */
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color) !important;
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: white !important; /* Blanco para contraste alto */
+    text-shadow: 0 0 8px rgba(123, 66, 255, 0.4);
 }
 
+/* Enlaces del navbar */
 .navbar-nav .nav-link {
-    color: var(--dark-color) !important;
-    font-weight: 500;
-    margin: 0 10px;
-    padding: 10px 15px !important;
-    border-radius: 25px;
+    color: rgba(255, 255, 255, 0.85) !important; /* Blanco suave */
+    font-weight: 600;
+    margin: 0 8px;
+    padding: 10px 16px !important;
+    border-radius: 24px;
     transition: all 0.3s ease;
+    position: relative;
 }
 
+/* Hover en enlaces */
 .navbar-nav .nav-link:hover {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: white !important;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(123, 66, 255, 0.3);
 }
 
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+/* Estado activo (opcional, si quieres resaltar la sección actual) */
+.navbar-nav .nav-link.active {
+    color: white !important;
+    background: rgba(123, 66, 255, 0.2);
+}
+
+/* === SECCIONES FULL HEIGHT === */
+.section-full-height {
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
     position: relative;
     overflow: hidden;
+}
+
+.section-full-height .container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    position: relative;
 }
 
 .hero-section::before {
@@ -71,6 +97,7 @@ body {
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
     opacity: 0.3;
+    z-index: 1;
 }
 
 .hero-content {
@@ -102,7 +129,7 @@ body {
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-/* === BOTONES CON DEGRADADO === */
+/* === BOTÓN PERSONALIZADO === */
 .cta-button {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: white;
@@ -114,14 +141,18 @@ body {
     transition: all 0.3s ease;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1s ease-out 0.6s both;
-    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
 }
 
 .cta-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    color: white !important;
 }
 
+/* === IMAGEN DE PERFIL === */
 .profile-image {
     width: 400px;
     height: 400px;
@@ -137,29 +168,15 @@ body {
     transform: scale(1.05) rotate(5deg);
 }
 
-/* Decorative Elements */
+/* === ELEMENTOS DECORATIVOS === */
 .floating-element {
     position: absolute;
     animation: float 6s ease-in-out infinite;
 }
 
-.floating-element:nth-child(1) {
-    top: 20%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-element:nth-child(2) {
-    top: 60%;
-    right: 10%;
-    animation-delay: 2s;
-}
-
-.floating-element:nth-child(3) {
-    bottom: 20%;
-    left: 15%;
-    animation-delay: 4s;
-}
+.floating-element:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.floating-element:nth-child(2) { top: 60%; right: 10%; animation-delay: 2s; }
+.floating-element:nth-child(3) { bottom: 20%; left: 15%; animation-delay: 4s; }
 
 .shape {
     width: 60px;
@@ -184,28 +201,7 @@ body {
     border-bottom: 50px solid rgba(255, 255, 255, 0.1);
 }
 
-
-/* === SECCIONES FULL HEIGHT === */
-.section-full-height {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Ajuste para que el contenido no se quede pegado arriba */
-.section-full-height .container {
-    max-width: 90%;
-    margin: 0 auto;
-}
-/* Sections */
-.section {
-    padding: 100px 0;
-}
-
+/* === TÍTULOS DE SECCIÓN === */
 .section-title {
     font-size: 3rem;
     font-weight: 700;
@@ -214,16 +210,14 @@ body {
     color: var(--dark-color);
 }
 
-/* === SECCIÓN ESTUDIOS: FONDO SÓLIDO SUAVE === */
+/* === ESTUDIOS === */
 #estudios {
-    background-color: #b2a3e9; /* Lila suave, no blanco */
+    background-color: #b2a3e9;
 }
 
 #estudios .section-title {
     color: var(--light-bg);
-    margin-bottom: 2.5rem;
     position: relative;
-    display: inline-block;
 }
 
 #estudios .section-title::after {
@@ -238,7 +232,6 @@ body {
     border-radius: 2px;
 }
 
-/* Contenedor de la tabla */
 #estudios .table-responsive {
     margin-top: 1.5rem;
     border-radius: 16px;
@@ -247,71 +240,25 @@ body {
     background: rgb(244, 211, 244);
 }
 
-/* Tabla */
-#estudios .table {
-    margin-bottom: 0;
-    border-collapse: separate;
-    border-spacing: 0;
-}
-
-/* Encabezado */
 #estudios .table thead th {
     background: linear-gradient(135deg, var(--primary-color), #5a2de0) !important;
-    color: rgb(248, 243, 248) !important;
+    color: white !important;
     font-weight: 500;
-    font-size: 1.05rem;
     padding: 1.1rem 1.3rem;
-    text-align: left;
     border: none;
-    letter-spacing: 0.2px;
 }
 
-/* Cuerpo */
-#estudios .table tbody td {
-    padding: 0.5rem 1.3rem;
-    border: none;
-    color: var(--dark-color);
-    font-size: 1rem;
-    vertical-align: middle;
-    transition: all 0.25s ease;
-}
-
-#estudios .table tbody tr {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-#estudios .table tbody tr:last-child {
-    border-bottom: none;
-}
-
-/* Filas impares: fondo muy suave */
-#estudios .table tbody tr:nth-of-type(odd) {
-    background-color: rgba(123, 66, 255, 0.02);
-}
-
-/* Hover en filas */
 #estudios .table tbody tr:hover {
     background-color: rgba(123, 66, 255, 0.06) !important;
     transform: translateY(-1px);
     box-shadow: inset 4px 0 0 var(--primary-color);
 }
 
-/* Texto secundario (detalles del programa) */
-#estudios .table small {
-    color: var(--dark-color);
-    opacity: 0.6;
-    font-weight: 400;
-    display: block;
-    margin-top: 0.3rem;
-    font-size: 0.92rem;
-    line-height: 1.4;
-}
-/* === SECCIÓN PASATIEMPOS: FONDO COMO HERO === */
+/* === PASATIEMPOS === */
 #pasatiempos {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    position: relative;
-    overflow: hidden;
     color: white;
+    position: relative;
 }
 
 #pasatiempos::before {
@@ -326,16 +273,9 @@ body {
     z-index: 1;
 }
 
-#pasatiempos .section {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
-
 #pasatiempos .section-title {
     color: white;
     position: relative;
-    display: inline-block;
 }
 
 #pasatiempos .section-title::after {
@@ -350,7 +290,6 @@ body {
     border-radius: 2px;
 }
 
-/* Contenedor del carrusel */
 #pasatiempos .carousel-inner {
     padding: 2rem;
     background: rgba(255, 255, 255, 0.15);
@@ -358,10 +297,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 24px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    color: white;
 }
 
-/* Imagenes */
 #pasatiempos .carousel-item img {
     border: 4px solid white;
     border-radius: 24px;
@@ -374,49 +311,27 @@ body {
     border-color: var(--accent-color);
 }
 
-/* Título y descripción */
-#pasatiempos .hobby-title {
+.hobby-title {
     font-size: 2rem;
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
 }
 
-#pasatiempos .hobby-description {
+.hobby-description {
     font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
 }
 
-/* Controles del carrusel */
-#pasatiempos .carousel-control-prev-icon,
-#pasatiempos .carousel-control-next-icon {
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    opacity: 1;
-}
-
-#pasatiempos .carousel-indicators [data-bs-target] {
-    background-color: white;
-    opacity: 0.5;
-}
-
-#pasatiempos .carousel-indicators .active {
-    opacity: 1;
-    width: 30px;
-    border-radius: 15px;
-}
-/* === SECCIÓN PROYECTOS: FONDO SÓLIDO SUAVE === */
+/* === PROYECTOS === */
 #proyectos {
-    background-color: #eec886; /* Mismo fondo suave que Estudios */
+    background-color: #eec886;
 }
 
 #proyectos .section-title {
     color: var(--light-bg);
     position: relative;
-    display: inline-block;
 }
 
 #proyectos .section-title::after {
@@ -431,24 +346,24 @@ body {
     border-radius: 2px;
 }
 
-/* Tarjetas de proyectos */
 .project-card {
-    background: rgb(251, 251, 252);
-    border: 1px solid rgba(113, 47, 134, 0.777);
+    background: white;
+    border: 1px solid rgba(113, 47, 134, 0.3);
+    border-radius: 16px;
     transition: all 0.3s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 1.5rem;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(163, 93, 203, 0.1);
+    box-shadow: 0 10px 30px rgba(123, 66, 255, 0.15);
     border-color: var(--primary-color);
 }
 
-/* Título */
 .project-title {
     font-size: 1.4rem;
     font-weight: 700;
@@ -456,7 +371,6 @@ body {
     margin-bottom: 0.8rem;
 }
 
-/* Descripción */
 .project-description {
     font-size: 1rem;
     color: var(--dark-color);
@@ -465,7 +379,6 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Badges de tecnologías */
 .tech-badges .tech-badge {
     display: inline-block;
     padding: 0.4rem 0.8rem;
@@ -484,109 +397,79 @@ body {
     color: var(--dark-color);
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+/* === CONTACTO === */
+#contacto .contact-form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+#contacto label {
+    font-weight: 500;
+}
+
+#contacto .form-control,
+#contacto .form-select {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#contacto .btn-light {
+    background: white;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* === FOOTER === */
+footer {
+    background: white;
+    color: var(--dark-color);
+    padding: 2rem 0;
+    margin-top: 0;
+}
+
+footer .social-links a {
+    color: var(--dark-color); /* corregido: no usar text-white con fondo blanco */
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(180deg);
-    }
+    0%, 100% { transform: translateY(0) rotate(0); }
+    50% { transform: translateY(-20px) rotate(180deg); }
 }
 
-/* Responsive */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .profile-image {
-        width: 200px;
-        height: 200px;
-        margin-top: 2rem;
-    }
-
-    .floating-element {
-        display: none;
-    }
-
-    /* Estudios */
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.2rem; }
+    .profile-image { width: 200px; height: 200px; margin-top: 2rem; }
+    .floating-element { display: none; }
     #estudios .table thead th,
-    #estudios .table tbody td {
-        padding: 1rem 0.8rem;
-        font-size: 0.95rem;
-    }
-
-    #estudios .table small {
-        font-size: 0.85rem;
-    }
-
-    /* Pasatiempos */
-    #pasatiempos .carousel-item {
-        flex-direction: column;
-    }
-
-    #pasatiempos .carousel-item img {
-        max-width: 300px;
-        height: 250px;
-        border-radius: 20px;
-        border-color: white;
-    }
-
-    #pasatiempos .hobby-title {
-        font-size: 1.6rem;
-    }
-
-    /* Proyectos */
-    #proyectos .section-title {
-        font-size: 2rem;
-    }
-
-    .project-card {
-        height: auto;
-    }
-
-    .project-title {
-        font-size: 1.3rem;
-    }
-
-    .project-description {
-        font-size: 0.95rem;
-    }
-
-    .tech-badges .tech-badge {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
-    }
+    #estudios .table tbody td { padding: 1rem 0.8rem; font-size: 0.95rem; }
+    #estudios .table small { font-size: 0.85rem; }
+    #pasatiempos .carousel-item { flex-direction: column; }
+    #pasatiempos .carousel-item img { max-width: 300px; height: 250px; border-radius: 20px; }
+    #pasatiempos .hobby-title { font-size: 1.6rem; }
+    #proyectos .section-title { font-size: 2rem; }
+    .project-card { height: auto; }
+    .project-title { font-size: 1.3rem; }
+    .project-description { font-size: 0.95rem; }
+    .tech-badges .tech-badge { font-size: 0.8rem; padding: 0.3rem 0.6rem; }
 }
