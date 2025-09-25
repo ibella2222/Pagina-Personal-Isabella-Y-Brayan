@@ -252,10 +252,116 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2025 Isabella Trochez. Todos los derechos reservados.</p>
+    <!-- Contacto Section -->
+    <section id="contacto" class="py-5 position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--bs-primary), var(--bs-warning));">
+        <div class="container position-relative">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="display-4 fw-bold text-center mb-5 text-white fade-in">Contacto</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="contact-form p-4 fade-in">
+                        <h4 class="text-white mb-4"><i class="fas fa-envelope me-2"></i>Envíame un mensaje</h4>
+                        <form id="contactForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nombre" class="form-label text-white">Nombre *</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                    <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label text-white">Email *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                    <div class="invalid-feedback">Por favor ingresa un email válido.</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label text-white">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono">
+                            </div>
+                            <div class="mb-3">
+                                <label for="motivo" class="form-label text-white">Motivo de contacto</label>
+                                <select class="form-select" id="motivo">
+                                    <option value="">Selecciona un motivo</option>
+                                    <option value="trabajo">Oportunidad laboral</option>
+                                    <option value="proyecto">Propuesta de proyecto</option>
+                                    <option value="colaboracion">Colaboración</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label text-white">Mensaje *</label>
+                                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                                <div class="invalid-feedback">Por favor ingresa tu mensaje.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label text-white">Preferencia de contacto:</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="preferencia" id="prefEmail" value="email" checked>
+                                        <label class="form-check-label text-white" for="prefEmail">Email</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="preferencia" id="prefTelefono" value="telefono">
+                                        <label class="form-check-label text-white" for="prefTelefono">Teléfono</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terminos" required>
+                                <label class="form-check-label text-white" for="terminos">
+                                    Acepto los términos y condiciones *
+                                </label>
+                                <div class="invalid-feedback">Debes aceptar los términos y condiciones.</div>
+                            </div>
+                            <div id="mensajeRespuesta" class="alert" role="alert" style="display: none;"></div>
+                            <button type="submit" class="btn btn-light btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form p-4 fade-in">
+                        <h4 class="text-white mb-4"><i class="fas fa-list me-2"></i>Contactos Guardados</h4>
+                        <div class="mb-3">
+                            <button class="btn btn-danger btn-sm me-2" onclick="eliminarTodosLosContactos()">
+                                <i class="fas fa-trash me-1"></i>Borrar Todo
+                            </button>
+                            <button class="btn btn-info btn-sm" onclick="mostrarContactos()">
+                                <i class="fas fa-sync me-1"></i>Actualizar Lista
+                            </button>
+                        </div>
+                        <div id="listaContactos" class="contact-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Brayan Meneses</h5>
+                    <p class="mb-0">Desarrollador Full Stack & Diseñador Creativo</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-github fs-4"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="fas fa-envelope fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 Brayan Meneses. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
