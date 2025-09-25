@@ -188,8 +188,8 @@ html {
 }
 
 .expectations {
-    background: var(--gradient-primary);
-    color: var(--color-primary);
+    background: linear-gradient(135deg, #1976d2, #42a5f5);
+    color: #ffffff; /* blanco puro para contraste */
     padding: 2rem;
     border-radius: 15px;
     margin: 2rem 0;
