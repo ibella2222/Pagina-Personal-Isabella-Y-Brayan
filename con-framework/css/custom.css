@@ -184,6 +184,23 @@ body {
     border-bottom: 50px solid rgba(255, 255, 255, 0.1);
 }
 
+
+/* === SECCIONES FULL HEIGHT === */
+.section-full-height {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ajuste para que el contenido no se quede pegado arriba */
+.section-full-height .container {
+    max-width: 90%;
+    margin: 0 auto;
+}
 /* Sections */
 .section {
     padding: 100px 0;
