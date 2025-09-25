@@ -215,7 +215,7 @@ body {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 50px;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     border-radius: 2px;
@@ -227,7 +227,7 @@ body {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    background: rgb(251, 250, 251);
+    background: rgb(244, 211, 244);
 }
 
 /* Tabla */
@@ -241,17 +241,17 @@ body {
 #estudios .table thead th {
     background: linear-gradient(135deg, var(--primary-color), #5a2de0) !important;
     color: rgb(248, 243, 248) !important;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.05rem;
     padding: 1.1rem 1.3rem;
     text-align: left;
     border: none;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
 }
 
 /* Cuerpo */
 #estudios .table tbody td {
-    padding: 1.1rem 1.3rem;
+    padding: 0.5rem 1.3rem;
     border: none;
     color: var(--dark-color);
     font-size: 1rem;
@@ -282,14 +282,13 @@ body {
 /* Texto secundario (detalles del programa) */
 #estudios .table small {
     color: var(--dark-color);
-    opacity: 0.7;
+    opacity: 0.6;
     font-weight: 400;
     display: block;
     margin-top: 0.3rem;
     font-size: 0.92rem;
     line-height: 1.4;
 }
-
 /* === SECCIÓN PASATIEMPOS: FONDO COMO HERO === */
 #pasatiempos {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -392,7 +391,6 @@ body {
     width: 30px;
     border-radius: 15px;
 }
-
 /* === SECCIÓN PROYECTOS: FONDO SÓLIDO SUAVE === */
 #proyectos {
     background-color: #eec886; /* Mismo fondo suave que Estudios */
