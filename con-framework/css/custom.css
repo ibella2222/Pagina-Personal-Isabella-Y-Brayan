@@ -1,9 +1,9 @@
 :root {
-    --primary-color: #7B42FF;    /* Púrpura eléctrico */
-    --secondary-color: #00F5FF;  /* Cian neón */
-    --accent-color: #FFD166;     /* Amarillo mostaza vibrante */
-    --dark-color: #0F0F1B;       /* Negro azulado */
-    --light-bg: #F0F4FF;         /* Lila muy claro */
+    --primary-color: #7B42FF;   
+    --secondary-color: #00F5FF;  
+    --accent-color: #b60e11;    
+    --dark-color: #0F0F1B;      
+    --light-bg: #F0F4FF;        
 }
 
 * {
@@ -14,36 +14,46 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /* ajustado para mejor legibilidad */
+    line-height: 1.6; 
     color: var(--dark-color);
     overflow-x: hidden;
 }
-
-/* === NAVBAR MODERNA (OSCURA Y ELEGANTE) === */
+/* === NAVBAR === */
 .modern-navbar {
-    background: rgba(15, 15, 27, 0.92); /* Negro azulado casi opaco */
+    background: rgba(15, 15, 27, 0.92);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); /* Compatibilidad con Safari */
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(123, 66, 255, 0.2); /* Toque de color sutil */
+    border-bottom: 1px solid rgba(123, 66, 255, 0.2);
 }
 
+.modern-navbar .container {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.modern-navbar .navbar-brand,
+.modern-navbar .navbar-nav .nav-link {
+    padding-top: 1.1rem !important;
+    padding-bottom: 1.1rem !important;
+}
 /* Logo del navbar */
 .navbar-brand {
     font-weight: 800;
     font-size: 1.6rem;
-    color: white !important; /* Blanco para contraste alto */
+    color: white !important; 
     text-shadow: 0 0 8px rgba(123, 66, 255, 0.4);
 }
 
 /* Enlaces del navbar */
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.85) !important; /* Blanco suave */
+    color: rgba(255, 255, 255, 0.85) !important;
     font-weight: 600;
     margin: 0 8px;
     padding: 10px 16px !important;
@@ -60,7 +70,7 @@ body {
     box-shadow: 0 4px 12px rgba(123, 66, 255, 0.3);
 }
 
-/* Estado activo (opcional, si quieres resaltar la sección actual) */
+/* Estado activo para resaltar la sección actual */
 .navbar-nav .nav-link.active {
     color: white !important;
     background: rgba(123, 66, 255, 0.2);
@@ -81,7 +91,6 @@ body {
     max-width: 90%;
     margin: 0 auto;
 }
-
 /* === HERO SECTION === */
 .hero-section {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
@@ -211,9 +220,7 @@ body {
 }
 
 /* === ESTUDIOS === */
-#estudios {
-    background-color: #b2a3e9;
-}
+
 
 #estudios .section-title {
     color: var(--light-bg);
@@ -291,7 +298,7 @@ body {
 }
 
 #pasatiempos .carousel-inner {
-    padding: 2rem;
+    padding: 2rem 5rem 2rem 2rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -303,7 +310,7 @@ body {
     border: 4px solid white;
     border-radius: 24px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    transition: all 0.6s ease;
 }
 
 #pasatiempos .carousel-item img:hover {
@@ -312,16 +319,17 @@ body {
 }
 
 .hobby-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: white;
     margin-bottom: 1rem;
 }
 
 .hobby-description {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
+    line-height: 1.2;
+    
 }
 
 /* === PROYECTOS === */
@@ -397,14 +405,17 @@ body {
     color: var(--dark-color);
 }
 
-/* === CONTACTO === */
-#contacto .contact-form {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.project-card a {
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
+.project-card a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+/* === CONTACTO === */
 #contacto label {
     font-weight: 500;
 }
@@ -430,7 +441,7 @@ footer {
 }
 
 footer .social-links a {
-    color: var(--dark-color); /* corregido: no usar text-white con fondo blanco */
+    color: var(--dark-color);
     font-size: 1.5rem;
     transition: color 0.3s;
 }
