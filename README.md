@@ -141,7 +141,7 @@ Abre un Pull Request.
 
 Isabella Andrea Trochez Salazar
 
-Brayan [Apellido pendiente]
+Brayan Meneses
 
 📧 Para consultas, contáctanos a través del formulario en la página.
 
