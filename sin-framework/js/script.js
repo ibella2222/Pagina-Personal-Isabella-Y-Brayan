@@ -42,26 +42,25 @@ function mostrarContactos() {
     const contactos = contactFacade.listarContactos();
 
     if (contactos.length === 0) {
-        lista.innerHTML = '<p class="text-white-50">No hay contactos guardados.</p>';
+        lista.innerHTML = '<p class="no-contacts">No hay contactos guardados.</p>';
         return;
     }
 
     lista.innerHTML = contactos.map(contacto => `
         <div class="contact-item">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-                <h6 class="text-white mb-0">${contacto.nombre}</h6>
-                <button class="btn btn-danger btn-sm" onclick="contactFacade.eliminarContacto('${contacto.id}')">
-                    <i class="fas fa-times"></i>
-                </button>
+            <div class="contact-header">
+                <span class="contact-name">${contacto.nombre}</span>
+                <button class="delete-btn" onclick="contactFacade.eliminarContacto('${contacto.id}')">✖</button>
             </div>
-            <p class="text-white-75 mb-1"><i class="fas fa-envelope me-1"></i>${contacto.email}</p>
-            ${contacto.telefono ? `<p class="text-white-75 mb-1"><i class="fas fa-phone me-1"></i>${contacto.telefono}</p>` : ''}
-            ${contacto.motivo ? `<p class="text-white-75 mb-1"><i class="fas fa-tag me-1"></i>${contacto.motivo}</p>` : ''}
-            <p class="text-white-60 mb-1">${contacto.mensaje.substring(0, 100)}${contacto.mensaje.length > 100 ? '...' : ''}</p>
-            <small class="text-white-50">Creado: ${new Date(contacto.fechaCreacion).toLocaleString()}</small>
+            <p class="contact-info"> ${contacto.email}</p>
+            ${contacto.telefono ? `<p class="contact-info"> ${contacto.telefono}</p>` : ''}
+            ${contacto.motivo ? `<p class="contact-info"> ${contacto.motivo}</p>` : ''}
+            <p class="contact-message">${contacto.mensaje.substring(0, 100)}${contacto.mensaje.length > 100 ? '...' : ''}</p>
+            <small class="contact-date">Creado: ${new Date(contacto.fechaCreacion).toLocaleString()}</small>
         </div>
     `).join('');
 }
+
 
 // Formulario
 document.getElementById('contactForm').addEventListener('submit', function(e) {
